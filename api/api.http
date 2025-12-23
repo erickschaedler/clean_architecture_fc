@@ -1,0 +1,49 @@
+### Criar Pedido 1
+POST http://localhost:8000/order
+Content-Type: application/json
+
+{
+    "id": "pedido-1",
+    "price": 100.50,
+    "tax": 10.05
+}
+
+### Criar Pedido 2
+POST http://localhost:8000/order
+Content-Type: application/json
+
+{
+    "id": "pedido-2",
+    "price": 250.00,
+    "tax": 25.00
+}
+
+### Criar Pedido 3
+POST http://localhost:8000/order
+Content-Type: application/json
+
+{
+    "id": "pedido-3",
+    "price": 500.00,
+    "tax": 50.00
+}
+
+### Listar Pedidos
+GET http://localhost:8000/order
+Content-Type: application/json
+
+### GraphQL - Criar Pedido
+POST http://localhost:8080/query
+Content-Type: application/json
+
+{
+    "query": "mutation createOrder { createOrder(input: {id: \"pedido-graphql-1\", price: 150.00, tax: 15.00}) { id price tax finalPrice } }"
+}
+
+### GraphQL - Listar Pedidos
+POST http://localhost:8080/query
+Content-Type: application/json
+
+{
+    "query": "query { orders { id price tax finalPrice } }"
+}

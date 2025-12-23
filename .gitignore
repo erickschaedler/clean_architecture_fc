@@ -1,0 +1,38 @@
+# Binarios
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+ordersystem
+
+# Arquivos de teste
+*.test
+
+# Diretorio de saida
+/bin/
+/tmp/
+
+# Dependencias
+/vendor/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Arquivos de ambiente local (manter .env como exemplo)
+.env.local
+.env.*.local
+
+# Docker volumes
+mysql_data/
